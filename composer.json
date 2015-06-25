@@ -1,0 +1,28 @@
+{
+    "name": "simukti/kadalkesit",
+    "description": "Another bare bone skeleton of stratigility, diactoros, and fastroute",
+    "license": "BSD-3-Clause",
+    "type": "project",
+    "keywords": [
+        "http", "psr-7", "middleware", "diactoros", "stratigility", "fastroute"
+    ],
+    "authors": [
+        {
+            "name": "Sarjono Mukti Aji",
+            "email": "me@simukti.net",
+            "homepage": "https://simukti.net"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=5.6.0",
+        "nikic/fast-route": "0.*@stable",
+        "zendframework/zend-stratigility": "1.*@stable",
+        "zendframework/zend-diactoros": "1.*@stable"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "src"
+        }
+    }
+}
