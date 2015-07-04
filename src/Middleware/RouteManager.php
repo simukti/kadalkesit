@@ -2,6 +2,7 @@
 namespace Middleware;
 
 use Zend\Stratigility\MiddlewareInterface;
+use Zend\Stratigility\Http\Response;
 use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\ResponseInterface;
 use FastRoute\Dispatcher;
@@ -120,6 +121,8 @@ class RouteManager implements MiddlewareInterface
                 )
             );
         }
+        
+        $response = ($response instanceof Response)?: new Response($response);
         
         return $out($request, $response);
     }
